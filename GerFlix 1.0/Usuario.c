@@ -1,5 +1,7 @@
 
 #include "Usuario.h"
+#include <stdio.h>
+#include <string.h>
 
 void inicializarUsuariosEstado(eUsuario usuarios[], int cant)
 {
@@ -14,10 +16,9 @@ void inicializarUsuariosHardCode(eUsuario usuarios[])
 {
 
 
-    int id[15] = {1000,1001,1002,1003,1004, 1005,1006,1007,1008,1009, 1010,1011,1012,1013,1014};
+    int id[15] = {1000,1001,1002,1003,1004,1005,1006,1007,1008,1009, 1010,1011,1012,1013,1014};
     char nombre[][50]={"Juan","Maria","Pedro","Vanesa","Jose","Luisa","Laura","Marcelo","German","Victoria","Dafne","Antonela","Gisele","Dario","Pedro"};
-
-    int serie[15] = {100,100,101,101,102,100,100,103,101,102,103,105,105,100,103};
+    int serie[15] = {100,100,101,101,102,100,100,103,101,102,103,104,104,100,103};
 
 
 
@@ -32,3 +33,23 @@ void inicializarUsuariosHardCode(eUsuario usuarios[])
 
     }
 }
+
+void mostrarListaUsuarios(eUsuario usuarios[], int cant)
+{
+    int i;
+    cant = 15;
+    printf("\nLista de usuarios:\n");
+    printf("Usuario  Nombre      Serie\n");
+    for(i=0; i<cant; i++)
+    {
+        fflush(stdin);
+        printf("%-8d %-10s %4d \n", usuarios[i].idUsuario, usuarios[i].nombre, usuarios[i].idSerie);
+    }
+
+}
+
+/*void ListaUsuarioxSerie(eUsuario usuarios[], int cant1, eSeries series[], int cant2)
+{
+
+
+}*/

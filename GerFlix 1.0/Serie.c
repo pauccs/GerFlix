@@ -1,5 +1,6 @@
 
 #include "Serie.h"
+#include <stdio.h>
 #include <string.h>
 
 /*
@@ -41,3 +42,37 @@ void inicializarSeriesHardCode(eSerie series[])
     }
 }
 
+
+void mostrarListaSeries(eSerie series[], int cant)
+{
+    int i;
+    cant = 5;
+    printf("\nLista de series:\n");
+    printf("ID   Nombre  Genero    Temporadas\n");
+    printf("--   ------  ------    ----------\n\n");
+    for(i=0; i<cant; i++)
+    {
+        fflush(stdin);
+        printf("%2d  %-6s  %-9s  %5d\n", series[i].idSerie, series[i].nombre, series[i].genero, series[i].cantidadTemporadas);
+    }
+
+}
+
+/*void ListaSeriexUsuario(eUsuario usuarios[], int cant1, eSeries series[][], int cant2)
+{
+    int i;
+    cant1 = 15;
+    cant2 = 5;
+    inicializarUsuariosHardCode();
+
+
+    printf("\nUsuario   Serie:\n\n");
+    for(i=0; i<15; i++)
+    {
+        if(usuarios[i].idSerie == series[i].idSerie)
+        {
+
+        }
+    }
+
+}*/

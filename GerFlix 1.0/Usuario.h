@@ -1,4 +1,5 @@
 
+
 typedef struct
 {
     int idUsuario;
@@ -10,3 +11,4 @@ typedef struct
 void inicializarUsuariosEstado(eUsuario[], int);
 void inicializarUsuariosHardCode(eUsuario[]);
 void mostrarListaUsuarios(eUsuario[], int);
+//void ListaUsuarioxSerie(eUsuario[], int,  eSeries[], int);
